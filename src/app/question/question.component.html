@@ -1,0 +1,22 @@
+<app-page [title]="question.text">
+    <div page-content class="answer-container">
+        <button *ngFor="let answer of question.answers; index as i;" class="answer" [ngClass]='{selected: i == this.selectedAnswer}' (click)="this.onSelect(i)" >
+            <div class="flex">
+                
+                <span class="answer-text flex-grow">
+                    {{answer.text}}
+                </span>
+
+                <svg *ngIf="this.selectedAnswer == i" class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
+                
+            </div>
+        </button>
+    </div>
+
+    <div page-action class="countdown">
+        <div>{{countdown}} seconds remaining to answer</div>
+        <div class="bar" [style.width]="countdownWidth()" [style.backgroundColor]="countdownColor()"></div>
+    </div>
+    <button page-action (click)="onSkipQuestion()">Skip Question</button> 
+    <button page-action (click)="onSubmit()">Submit</button>
+</app-page>

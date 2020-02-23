@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.title {
+    font-size: 2em;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.content {
+    flex: 1 0 auto;
+    overflow-y: scroll;
+    padding-left: 20px;
+    padding-right: 20px
+}
+.actions {
+    display: flex;
+    flex-direction: row;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.flex-grow {
+    flex: 1 0 auto;
+}

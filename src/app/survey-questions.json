@@ -1,0 +1,46 @@
+{
+    "questions": [ { 
+            "id": "fav-dis-princess",
+            "text" : "Who is your favorite Disney princess?",
+            "answers" : [
+              {"text": "Cinderella"},
+              {"text": "Snow White"},
+              {"text": "Sleeping Beauty"},
+              {"text": "Belle"}
+            ]
+        },
+      {
+        "id": "fav-prog-lang",
+        "text": "What is your favorite programming language?",
+        "answers" : [
+          {"text": "C#"},
+          {"text": "Java"},
+          {"text": "ABAP"},
+          {"text": "Python"},
+          {"text": "Typescript"},
+          {"text": "Other"}
+        ]
+      }, 
+      {
+        "id": "comm-style",
+        "text": "What is your communication style?",
+        "answers": [
+          {"text": "Controller"},
+          {"text": "Doer"},
+          {"text": "Supporter"},
+          {"text": "Talker"}
+        ]
+      },
+      {
+        "id": "fav-ide",
+        "text": "What is your favorite IDE?",
+        "answers": [
+          {"text": "VS Code"},
+          {"text": "Eclipse"},
+          {"text": "Any JetBrains"},
+          {"text": "Vim"},
+          {"text": "Other"}
+        ]
+      }
+    ]
+}
