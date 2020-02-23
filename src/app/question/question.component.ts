@@ -1,8 +1,7 @@
 import { Component, OnInit, Input, OnDestroy } from '@angular/core';
 import { Question, SurveyService } from '../survey.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { timer, Observable, Subscription } from 'rxjs';
-import { read } from 'fs';
+import { timer, Subscription } from 'rxjs';
 
 
 @Component({
