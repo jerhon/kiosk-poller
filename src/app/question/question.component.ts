@@ -53,13 +53,17 @@ export class QuestionComponent implements OnInit, OnDestroy {
     this.countdown -= 1;
     
     if (this.countdown <= 0) {
-      this.onSkipQuestion();
+      this.returnHome();
     }
   }
 
   onSelect(i: number) {
     console.log('Selected answer: ' + i);
     this.selectedAnswer = i;
+  }
+
+  returnHome() {
+    this.router.navigate(['/']);
   }
 
   onSubmit() {

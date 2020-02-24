@@ -8,6 +8,7 @@ import { PollResultsComponent } from './poll-results/poll-results.component';
 import { QuestionResolver } from './question/question.resolver';
 import { VotesResolver } from './poll-results/votes-resolver.service';
 import { AppPageComponent } from './app-page/app-page.component';
+import { NameplateComponent } from './nameplate/nameplate.component';
 
 const routes : Routes = [
   {
@@ -24,6 +25,11 @@ const routes : Routes = [
       question: QuestionResolver,
       votes: VotesResolver
     }
+  },
+  {
+    path: '',
+    pathMatch: 'full',
+    component: NameplateComponent
   }
 ];
 
@@ -32,7 +38,8 @@ const routes : Routes = [
     AppComponent,
     QuestionComponent,
     PollResultsComponent,
-    AppPageComponent
+    AppPageComponent,
+    NameplateComponent
   ],
   imports: [
     BrowserModule,

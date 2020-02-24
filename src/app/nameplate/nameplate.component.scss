@@ -1,0 +1,23 @@
+
+.details {
+    display: flex;
+    flex-direction: row;
+}
+
+.left {
+    flex: 0 0 auto;
+
+    img {
+        padding-right: 40px;
+        padding-left: 20px;
+        height: 300px;
+    }
+}
+
+.right {
+    flex: 1 0 auto;
+
+    p {
+        font-size: 1.25em;
+    }
+}

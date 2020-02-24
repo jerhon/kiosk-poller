@@ -1,14 +1,15 @@
 {
-    "questions": [ { 
-            "id": "fav-dis-princess",
-            "text" : "Who is your favorite Disney princess?",
-            "answers" : [
-              {"text": "Cinderella"},
-              {"text": "Snow White"},
-              {"text": "Sleeping Beauty"},
-              {"text": "Belle"}
-            ]
-        },
+    "questions": [ 
+      { 
+        "id": "fav-dis-princess",
+        "text" : "Who is your favorite Disney princess?",
+        "answers" : [
+          {"text": "Cinderella"},
+          {"text": "Snow White"},
+          {"text": "Sleeping Beauty"},
+          {"text": "Belle"}
+        ]
+      },
       {
         "id": "fav-prog-lang",
         "text": "What is your favorite programming language?",
@@ -40,6 +41,23 @@
           {"text": "Any JetBrains"},
           {"text": "Vim"},
           {"text": "Other"}
+        ]
+      },
+      {
+        "id": "coke-or-pepsi",
+        "text": "What pop would you rather drink?",
+        "answers": [
+          {"text": "Pepsi"},
+          {"text": "Coke"}
+        ]
+      },
+      {
+        "id": "feared-or-loved",
+        "text": "Would you rather be feared or loved?",
+        "answers": [
+          {"text":"Feared"},
+          {"text":"Loved"},
+          {"text":"I want people to be afraid of how much they love me."}
         ]
       }
     ]

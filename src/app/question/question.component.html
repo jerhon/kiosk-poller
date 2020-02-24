@@ -17,6 +17,6 @@
         <div>{{countdown}} seconds remaining to answer</div>
         <div class="bar" [style.width]="countdownWidth()" [style.backgroundColor]="countdownColor()"></div>
     </div>
-    <button page-action class="action" (click)="onSkipQuestion()">Skip Question</button> 
+    <a page-action class="action button" [routerLink]="['/results', this.question.id]">See Results</a> 
     <button page-action class="action" (click)="onSubmit()">Submit</button>
 </app-page>

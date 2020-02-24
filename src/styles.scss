@@ -1,5 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 
+
+$green: #7ac142;
+
+
 body {
     font-family: 'Amatic SC', 'Sans' ;
     font-size: 30px;
@@ -8,27 +12,39 @@ body {
     margin: 0px;
     padding: 0px;
 }
-button {
 
+a.button,
+button {
     display: block;
     
     font-size: 1.5em;
     font-family: inherit;
 
-    border: 1px solid rgb(138, 43, 226);
+    border: 1px solid $green;
     border-radius: 5px;
     
     margin: 10px;
-    padding: 10px;
-    min-height: 100px;
+    height: 100px;
     min-width: 300px;
+    padding-left: 10px;
+    padding-right: 10px;
 
     color: white;
     background-color: transparent;
+    
+    text-align: center;
+    text-decoration: none;
 }
+
+a.button {
+    line-height: 100px;
+}
+
+a.button:focus,
 button:focus {
     outline: none;
 }
+
 
 
 .centered {
