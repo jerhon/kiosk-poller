@@ -1,6 +1,6 @@
 # Poller
 
-This is a project to build a basic polling application, to be used on a Raspberry PI as a fun PoC Kiosk application.
+This is a project to build a basic nameplate / polling application, to be used on a Raspberry PI as a fun PoC Kiosk application.
 
 ## Development server
 
