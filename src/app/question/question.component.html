@@ -13,11 +13,9 @@
         </button>
     </div>
 
-    <div page-action class="countdown">
-        <div>{{countdown}} seconds remaining to answer</div>
-        <div class="bar" [style.width]="countdownWidth()" [style.backgroundColor]="countdownColor()"></div>
-    </div>
+    <app-countdown-timer #countdown page-action [countdownLength]="30" [subtitle]="'seconds remaining...'" (countdownFinished)="returnHome()">
+    </app-countdown-timer>
     <button page-action class="action" (click)="onSkipQuestion()">Skip</button>
-    <a page-action class="action button" [routerLink]="['/results', this.question.id]">See Results</a> 
+    <a page-action class="action button" [routerLink]="['/results', this.question.id]">Results</a> 
     <button page-action class="action" (click)="onSubmit()">Submit</button>
 </app-page>

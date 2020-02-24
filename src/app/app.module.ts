@@ -9,6 +9,7 @@ import { QuestionResolver } from './question/question.resolver';
 import { VotesResolver } from './poll-results/votes-resolver.service';
 import { AppPageComponent } from './app-page/app-page.component';
 import { NameplateComponent } from './nameplate/nameplate.component';
+import { CountdownTimerComponent } from './countdown-timer/countdown-timer.component';
 
 const routes : Routes = [
   {
@@ -39,7 +40,8 @@ const routes : Routes = [
     QuestionComponent,
     PollResultsComponent,
     AppPageComponent,
-    NameplateComponent
+    NameplateComponent,
+    CountdownTimerComponent
   ],
   imports: [
     BrowserModule,
