@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { timer } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nameplate',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NameplateComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+
+    timer(30000).subscribe((x) => this.router.navigate(['/question', 'random']));
   }
 
 }

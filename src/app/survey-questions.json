@@ -47,8 +47,9 @@
         "id": "coke-or-pepsi",
         "text": "What pop would you rather drink?",
         "answers": [
-          {"text": "Pepsi"},
-          {"text": "Coke"}
+          {"text": "Pepsi" },
+          {"text": "Coke"  },
+          {"text": "Neither" }
         ]
       },
       {
@@ -59,6 +60,22 @@
           {"text":"Loved"},
           {"text":"I want people to be afraid of how much they love me."}
         ]
+      },
+      {
+        "id": "pick-a-number",
+        "text": "Pick a number.",
+        "answers": [
+          {"text": "1"},
+          {"text": "2"},
+          {"text": "3"},
+          {"text": "4"},
+          {"text": "5"},
+          {"text": "6"},
+          {"text": "7"},
+          {"text": "8"},
+          {"text": "9"}
+        ]
       }
+
     ]
 }

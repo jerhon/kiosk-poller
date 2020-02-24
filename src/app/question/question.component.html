@@ -1,6 +1,6 @@
 <app-page [title]="question.text">
     <div page-content class="answer-container">
-        <button *ngFor="let answer of question.answers; index as i;" class="answer" [ngClass]='{selected: i == this.selectedAnswer}' (click)="this.onSelect(i)" >
+        <button *ngFor="let answer of question.answers; index as i;" class="answer flex-grow" [ngClass]='{selected: i == this.selectedAnswer}' (click)="this.onSelect(i)" >
             <div class="flex">
                 
                 <span class="answer-text flex-grow">
@@ -17,6 +17,7 @@
         <div>{{countdown}} seconds remaining to answer</div>
         <div class="bar" [style.width]="countdownWidth()" [style.backgroundColor]="countdownColor()"></div>
     </div>
+    <button page-action class="action" (click)="onSkipQuestion()">Skip</button>
     <a page-action class="action button" [routerLink]="['/results', this.question.id]">See Results</a> 
     <button page-action class="action" (click)="onSubmit()">Submit</button>
 </app-page>

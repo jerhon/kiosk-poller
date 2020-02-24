@@ -23,14 +23,18 @@ export class PollResultsComponent implements OnInit {
     });
   }
 
-  totalVotes() {
-    let keys = Object.getOwnPropertyNames(this.votes);
-    return keys.map((k) => this.votes[k]).reduce((pv, cv) => pv+cv);
-  }
-  
   maxVotes() {
-    let keys = Object.getOwnPropertyNames(this.votes);
-    return keys.map((k) => this.votes[k]).reduce((pv, cv) => Math.max(pv, cv));
+    if (this.votes) {
+      let keys = Object.getOwnPropertyNames(this.votes);
+      if (keys.length > 0) {
+        return keys.map((k) => this.votes[k]).reduce((pv, cv) => Math.max(pv, cv));
+      } else {
+        return 0;
+      }
+    }
+    else {
+      return 0;
+    }
   }
 
   barSize(idx: number) {
