@@ -2,7 +2,7 @@ FROM nodejs:latest as build
 
 ADD * /app/src
 WORKDIR /app/src
-RUN npm install
+RUN npm install \
     && npm run build
 
 FROM nginx:latest
