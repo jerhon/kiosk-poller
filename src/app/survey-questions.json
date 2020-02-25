@@ -6,8 +6,13 @@
         "answers" : [
           {"text": "Cinderella"},
           {"text": "Snow White"},
-          {"text": "Sleeping Beauty"},
-          {"text": "Belle"}
+          {"text": "Aurora"},
+          {"text": "Belle"},
+          {"text": "Ariel"},
+          {"text": "Elsa"},
+          {"text": "Ana"},
+          {"text": "Mulan"},
+          {"text": "Jasmine"}
         ]
       },
       {
@@ -75,7 +80,21 @@
           {"text": "8"},
           {"text": "9"}
         ]
+      },
+      {
+        "id": "linux-distro",
+        "text": "What's your favorite Linux distrobution",
+        "answers": [
+          {"text": "Ubuntu"},
+          {"text": "Debian"},
+          {"text": "RHEL / CentOS"},
+          {"text": "Gentoo"},
+          {"text": "Fedora"},
+          {"text": "Arch Linux"},
+          {"text": "SUSE"},
+          {"text": "Raspbian"},
+          {"text": "Other"}
+        ]
       }
-
     ]
 }
