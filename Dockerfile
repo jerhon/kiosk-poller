@@ -6,6 +6,6 @@ RUN npm install \
     && npm run build
 
 FROM nginx:latest
-COPY --from=build /app/src/dist/kisok-nameplate /usr/share/nginx/html
+COPY --from=build /app/src/dist/kiosk-nameplate /usr/share/nginx/html
 
 EXPOSE 80
