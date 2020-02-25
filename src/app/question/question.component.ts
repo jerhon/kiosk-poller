@@ -16,7 +16,7 @@ export class QuestionComponent implements OnInit {
   selectedAnswer: number | null;
 
   @ViewChild('countdown')
-  public countdown: ElementRef<CountdownTimerComponent>;
+  public countdown: CountdownTimerComponent;
 
   @Input()
   public question: Question;
@@ -25,7 +25,9 @@ export class QuestionComponent implements OnInit {
     this.route.data.subscribe((d) => {
       this.question = d.question
       this.selectedAnswer = null;
-      this.countdown.nativeElement.reset();
+      if (this.countdown) {
+        this.countdown.reset();
+      }
     });
 
   }
@@ -46,7 +48,7 @@ export class QuestionComponent implements OnInit {
   }
   
   onSkipQuestion() {
-    this.countdown.nativeElement.reset();
+    this.countdown.reset();
     this.router.navigate(['question', this.survey.getRandomQuestionId(this.question.id)]);
   }
 
