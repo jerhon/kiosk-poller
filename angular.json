@@ -3,7 +3,7 @@
   "version": 1, 
   "newProjectRoot": "projects",
   "projects": {
-    "poller": {
+    "kiosk-nameplate": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/poller",
+            "outputPath": "dist/kiosk-nameplate",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "poller:build"
+            "browserTarget": "kiosk-nameplate:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "poller:build:production"
+              "browserTarget": "kiosk-nameplate:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "poller:build"
+            "browserTarget": "kiosk-nameplate:build"
           }
         },
         "test": {
@@ -114,15 +114,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "poller:serve"
+            "devServerTarget": "kiosk-nameplate:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "poller:serve:production"
+              "devServerTarget": "kiosk-nameplate:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "poller"
+  "defaultProject": "kiosk-nameplate"
 }
