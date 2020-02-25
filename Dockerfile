@@ -1,4 +1,4 @@
-FROM nodejs:latest as build
+FROM node:latest as build
 
 ADD * /app/src
 WORKDIR /app/src
