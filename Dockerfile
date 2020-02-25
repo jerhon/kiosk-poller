@@ -1,6 +1,6 @@
 FROM node:latest as build
 
-ADD * /app/src
+ADD . /app/src
 WORKDIR /app/src
 RUN npm install \
     && npm run build
