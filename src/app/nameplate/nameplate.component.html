@@ -1,15 +1,15 @@
 <app-page [title]="'Jeremy Honl - Software Architect'">
-
-    <div page-content class="details">
+    
+    <div page-content class="details flex-grow">
         <div class="left">
             <img src="assets/images/profile-square.jpg" />
         </div>
         <div class="right">
-            <p>LinkedIn: https://www.linkedin.com/in/jhonl/</p>
-            <p>Web: https://www.honlsoft.com</p>
+            <p><b>LinkedIn:</b> https://www.linkedin.com/in/jhonl/</p>
+            <p><b>Web:</b> https://www.honlsoft.com</p>
             <p>POD 1234 - WEST 60</p>
         </div>
     </div>
 
-    <a page-action class="button" [routerLink]="['question','random']">Poll Me!</a>
+    <a page-action class="button flex-grow" [routerLink]="['question','random']">Take a Poll!</a>
 </app-page>

@@ -2,5 +2,6 @@
     <div page-content class="result-container" *ngFor="let answer of question.answers; index as i">
         <div class="bar" [style.width]="this.barSize(i)">{{answer.text}} - {{this.getVotes(i)}}</div>
     </div>
+    <div page-action class="flex-grow"></div>
     <button page-action (click)="nextQuestion()">Next Question</button>
 </app-page>
