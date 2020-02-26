@@ -1,4 +1,6 @@
-# Poller
+# pi-plate
+
+![.github/workflows/main.yml](https://github.com/jerhon/pi-plate/workflows/.github/workflows/main.yml/badge.svg)
 
 This is a project to build a basic nameplate / polling application, to be used on a Raspberry PI as a fun PoC Kiosk application.
 
