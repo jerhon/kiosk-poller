@@ -83,7 +83,7 @@
       },
       {
         "id": "linux-distro",
-        "text": "What's your favorite Linux distrobution",
+        "text": "What's your favorite Linux distribution?",
         "answers": [
           {"text": "Ubuntu"},
           {"text": "Debian"},
