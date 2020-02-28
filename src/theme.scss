@@ -1,19 +1,18 @@
+
 /* You can add global styles to this file, and also import other style files */
 
 @mixin create-theme($themeclass, $fontfamily, $fontcolor, $pagebgcolor, $buttoncolor) {
 
     body.#{$themeclass} {
         
-        //body {
-        font-family: $fontfamily ;
-        font-size: 30px;
+        font-family: $fontfamily;
+        font-size: 20px;
         background-color: $pagebgcolor;
         color: $fontcolor;
         margin: 0px;
         padding: 0px;
         -webkit-user-select: none;
         -moz-user-select: none;
-        //}
 
         a.button,
         button {
@@ -22,7 +21,7 @@
             font-size: 1.5em;
             font-family: inherit;
 
-            border: 1px solid $buttoncolor;
+            border: 3px solid $buttoncolor;
             border-radius: 5px;
             
             margin: 10px;
@@ -35,6 +34,7 @@
             text-decoration: none;
             cursor: pointer;
         }
+
         a.button {
             line-height: 100px;
         }
@@ -43,8 +43,6 @@
         button:focus {
             outline: none;
         }
-
-
 
         .centered {
             display: block;
@@ -56,24 +54,12 @@
             flex: 1 1 auto;
         }
 
-
         .question-text {
             font-size: 2em;
             padding: 10px;
             margin-bottom: 30px;
             text-align: center;
         }
-
-    
     }
 }
 
-
-@font-face {
-    font-family: 'Amatic SC';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: local('Amatic SC Regular'), local('AmaticSC-Regular'), url(./assets/fonts/amaticsc.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
