@@ -3,7 +3,7 @@
   "version": 1, 
   "newProjectRoot": "projects",
   "projects": {
-    "kiosk-nameplate": {
+    "pi-plate": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/kiosk-nameplate",
+            "outputPath": "dist/pi-plate",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "kiosk-nameplate:build"
+            "browserTarget": "pi-plate:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "kiosk-nameplate:build:production"
+              "browserTarget": "pi-plate:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "kiosk-nameplate:build"
+            "browserTarget": "pi-plate:build"
           }
         },
         "test": {
@@ -114,15 +114,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "kiosk-nameplate:serve"
+            "devServerTarget": "pi-plate:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "kiosk-nameplate:serve:production"
+              "devServerTarget": "pi-plate:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "kiosk-nameplate"
+  "defaultProject": "pi-plate"
 }
