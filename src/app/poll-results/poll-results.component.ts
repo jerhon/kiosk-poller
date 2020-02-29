@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { SurveyService, Votes, Question } from '../survey.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ChartOptions } from 'chart.js';
+import * as Chart from 'chart.js';
 
 
 
@@ -15,6 +17,12 @@ export class PollResultsComponent implements OnInit {
 
   public question: Question;
   public votes: Votes;
+  public chartOptions: ChartOptions = {
+    responsive: false,
+    legend: {
+      position: 'right'
+    }
+  };
 
   ngOnInit(): void {
     this.route.data.subscribe((d) => {
@@ -53,4 +61,18 @@ export class PollResultsComponent implements OnInit {
     return this.votes[i] | 0;
   }
 
+  getResults() {
+
+    let ret =  this.question.answers.map((ans,idx) => this.votes[idx] | 0);
+
+    //console.log(ret);
+
+    return ret;
+  }
+  getLabels() {
+    return this.question.answers.map((ans) => ans.text);
+  }
+  getColors() {
+    return this.question.answers.map((ans, idx) => 'rgba(255,0,0,1)');
+  }
 }

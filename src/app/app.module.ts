@@ -11,6 +11,10 @@ import { AppPageComponent } from './app-page/app-page.component';
 import { NameplateComponent } from './nameplate/nameplate.component';
 import { CountdownTimerComponent } from './countdown-timer/countdown-timer.component';
 
+import { ChartsModule } from 'ng2-charts';
+
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
+
 const routes : Routes = [
   {
     path: 'question/:questionId',
@@ -45,7 +49,9 @@ const routes : Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    BrowserAnimationsModule,
+    RouterModule.forRoot(routes),
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

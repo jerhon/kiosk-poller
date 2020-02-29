@@ -1,7 +1,10 @@
-<app-page [title]="'Results - ' + question.text">
-    <div page-content class="result-container" *ngFor="let answer of question.answers; index as i">
-        <div class="bar" [style.width]="this.barSize(i)">{{answer.text}} - {{this.getVotes(i)}}</div>
-    </div>
+<app-page [title]="question.text">
+    <canvas baseChart page-content height="380px" width="1000px"
+        [data]="this.getResults()"
+        [labels]="this.getLabels()"
+        [chartType]="'pie'"
+        [options]="this.chartOptions">
+    </canvas>
     <div page-action class="flex-grow"></div>
     <button page-action (click)="nextQuestion()">Next Question</button>
 </app-page>
