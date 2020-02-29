@@ -28,6 +28,14 @@ export class PollResultsComponent implements OnInit {
       }
     }
   };
+  
+  getLabels() {
+    return this.question.answers.map((ans,idx) => ans.text + " - " + (this.votes[idx] | 0));
+  }
+  getColors() {
+    return this.question.answers.map((ans, idx) => 'rgba(255,0,0,1)');
+  }
+
 
   ngOnInit(): void {
     this.route.data.subscribe((d) => {
@@ -35,49 +43,7 @@ export class PollResultsComponent implements OnInit {
       this.votes = d.votes;
     });
   }
-
-  maxVotes() {
-    if (this.votes) {
-      let keys = Object.getOwnPropertyNames(this.votes);
-      if (keys.length > 0) {
-        return keys.map((k) => this.votes[k]).reduce((pv, cv) => Math.max(pv, cv));
-      } else {
-        return 0;
-      }
-    }
-    else {
-      return 0;
-    }
-  }
-
-  barSize(idx: number) {
-    if ( this.maxVotes() && this.votes[idx] ) {
-      return (this.votes[idx] / this.maxVotes() * 100) + '%';
-    } else {
-      return '200px';
-    }
-  }
-
   nextQuestion() {
     this.router.navigate(['question', this.survey.getRandomQuestionId(this.question.id)]);
-  }
-
-  getVotes(i: number) {
-    return this.votes[i] | 0;
-  }
-
-  getResults() {
-
-    let ret =  this.question.answers.map((ans,idx) => this.votes[idx] | 0);
-
-    //console.log(ret);
-
-    return ret;
-  }
-  getLabels() {
-    return this.question.answers.map((ans,idx) => ans.text + " - " + (this.votes[idx] | 0));
-  }
-  getColors() {
-    return this.question.answers.map((ans, idx) => 'rgba(255,0,0,1)');
   }
 }
