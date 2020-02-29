@@ -3,7 +3,7 @@
 
 @mixin create-theme($themeclass, $fontfamily, $fontcolor, $pagebgcolor, $buttoncolor) {
 
-    body.#{$themeclass} {
+    .#{$themeclass} {
         
         font-family: $fontfamily;
         font-size: 20px;

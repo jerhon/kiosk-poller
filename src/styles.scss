@@ -25,3 +25,19 @@
 
 @include theme.create-theme(dark, 'Oxanium', white, black, #7ac142 );
 @include theme.create-theme(light, 'Oxanium', black, white, #7ac142 );
+
+
+body {
+    background-color: darkgrey;
+}
+
+.app {
+    // Dimensions of the application are fixed based on the size of my display
+    width: 1024px;
+    height: 600px;
+
+    @media only screen and (min-width: 1024px) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
