@@ -35,6 +35,9 @@ export class PollResultsComponent implements OnInit {
   getColors() {
     return this.question.answers.map((ans, idx) => 'rgba(255,0,0,1)');
   }
+  getResults() {
+    return this.question.answers.map((ans,idx) => this.votes[idx] | 0);
+  }
 
 
   ngOnInit(): void {
