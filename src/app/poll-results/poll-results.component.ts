@@ -20,7 +20,12 @@ export class PollResultsComponent implements OnInit {
   public chartOptions: ChartOptions = {
     responsive: false,
     legend: {
-      position: 'right'
+      position: 'right',
+      labels: {
+        fontSize: 20,
+        fontColor: 'white',
+        fontFamily: 'Oxanium'
+      }
     }
   };
 
@@ -70,7 +75,7 @@ export class PollResultsComponent implements OnInit {
     return ret;
   }
   getLabels() {
-    return this.question.answers.map((ans) => ans.text);
+    return this.question.answers.map((ans,idx) => ans.text + " - " + (this.votes[idx] | 0));
   }
   getColors() {
     return this.question.answers.map((ans, idx) => 'rgba(255,0,0,1)');
