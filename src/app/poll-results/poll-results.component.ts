@@ -1,9 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { SurveyService, Votes, Question } from '../survey.service';
+import { SurveyService, Vote, Question } from '../survey.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ChartOptions } from 'chart.js';
 import * as Chart from 'chart.js';
-
+import * as _ from 'underscore';
 
 
 @Component({
@@ -16,7 +16,7 @@ export class PollResultsComponent implements OnInit {
   constructor(private survey: SurveyService, private route: ActivatedRoute, private router: Router) { }
 
   public question: Question;
-  public votes: Votes;
+  public votes: Vote[];
   public chartOptions: ChartOptions = {
     responsive: false,
     legend: {
@@ -30,20 +30,20 @@ export class PollResultsComponent implements OnInit {
   };
   
   getLabels() {
-    return this.question.answers.map((ans,idx) => ans.text + " - " + (this.votes[idx] | 0));
+    return this.votes.map((ans) => ans.answer + " - " + ans.votes);
   }
   getColors() {
-    return this.question.answers.map((ans, idx) => 'rgba(255,0,0,1)');
+    return this.votes.map((ans, idx) => 'rgba(255,0,0,1)');
   }
   getResults() {
-    return this.question.answers.map((ans,idx) => this.votes[idx] | 0);
+    return this.votes.map((v) => v.votes);
   }
 
 
   ngOnInit(): void {
     this.route.data.subscribe((d) => {
       this.question = d.question;
-      this.votes = d.votes;
+      this.votes = _.sortBy(d.votes, (v) => v.votes).reverse();
     });
   }
   nextQuestion() {
